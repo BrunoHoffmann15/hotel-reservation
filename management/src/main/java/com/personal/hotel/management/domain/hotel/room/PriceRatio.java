@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Data
 public class PriceRatio {
-    private BigDecimal percentToConsider;
+    private BigDecimal percentageToConsider;
     private Date initialDate;
     private Date finalDate;
 

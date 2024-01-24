@@ -66,7 +66,7 @@ public class PriceRatioUnitTest {
     public void test_givenDateIsOnRange_WhenIsOnRange_ThenReturnTrue() {
         // setup
         PriceRatio priceRatio = new PriceRatio();
-        Date date = new Date(1705719600000L); // 2024/01/20
+        Date date = new Date(1705287600000L); // 2024/01/15
         Date finalDate = new Date(1705719600000L); // 2024/01/20
         Date initialDate = new Date(1705114800000L); // 2024/01/13
 
