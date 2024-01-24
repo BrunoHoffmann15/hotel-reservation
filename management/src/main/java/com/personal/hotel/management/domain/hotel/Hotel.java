@@ -1,5 +1,6 @@
 package com.personal.hotel.management.domain.hotel;
 
+import com.personal.hotel.management.domain.hotel.room.Room;
 import lombok.Data;
 
 import java.util.List;

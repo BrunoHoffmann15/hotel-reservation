@@ -1,4 +1,4 @@
-package com.personal.hotel.management.domain.hotel;
+package com.personal.hotel.management.domain.hotel.room;
 
 import lombok.Data;
 

@@ -5,7 +5,7 @@
 - I want to add my hotel information and the rooms available
 - So that my customers can make a reservation
 
-### Acceptance Criteria 1
+### Acceptance Criteria
 1. I need to add infos about my hotel: 
    1. address;
    2. name; 
