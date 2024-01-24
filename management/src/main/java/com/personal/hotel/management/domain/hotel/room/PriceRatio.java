@@ -10,4 +10,9 @@ public class PriceRatio {
     private BigDecimal percentToConsider;
     private Date initialDate;
     private Date finalDate;
+
+    public Boolean isOnRange(Date date) {
+        return date.compareTo(initialDate) >= 0
+                && date.compareTo(finalDate) <= 0;
+    }
 }
