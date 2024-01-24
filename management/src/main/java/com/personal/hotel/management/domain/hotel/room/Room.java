@@ -25,4 +25,16 @@ public class Room {
                 )
                 .orElseGet(() -> defaultPrice);
     }
+
+    public void addPriceRatio(PriceRatio priceRatioToAdd) throws Exception {
+        Boolean canConsiderInitialDate = !priceRatio.stream().anyMatch(p -> p.isOnRange(priceRatioToAdd.getInitialDate()));
+        Boolean canConsiderFinalDate = !priceRatio.stream().anyMatch(p -> p.isOnRange(priceRatioToAdd.getFinalDate()));
+
+        if (canConsiderInitialDate && canConsiderFinalDate) {
+             priceRatio.add(priceRatioToAdd);
+             return;
+        }
+
+        throw new Exception(String.format("Price ratio is conflicting with some date, initial date: %b, final date: %b", canConsiderInitialDate, canConsiderFinalDate));
+    }
 }
