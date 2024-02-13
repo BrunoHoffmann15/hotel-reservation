@@ -19,3 +19,4 @@
 4. The rooms will have a fixed price which needs to follow the rule:
     1. It will have a fixed value;
     2. It will have a range of dates that will increase the fixed value in a specific percentage;
+5. Hotels can not have the same name on the same city, in this case, is necessary to add a new name;

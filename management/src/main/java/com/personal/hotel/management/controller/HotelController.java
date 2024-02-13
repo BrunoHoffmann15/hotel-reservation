@@ -2,9 +2,7 @@ package com.personal.hotel.management.controller;
 
 import com.personal.hotel.management.domain.hotel.Hotel;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -14,12 +12,12 @@ import java.util.List;
 public class HotelController {
 
     @PostMapping
-    public ResponseEntity<Void> create() throws URISyntaxException {
+    public ResponseEntity<Void> create(@RequestBody Hotel hotel) throws URISyntaxException {
         return ResponseEntity.created(new URI("/hotels/" + 1)).build();
     }
 
     @GetMapping("{id-hotel}")
-    public ResponseEntity<Hotel> get() {
+    public ResponseEntity<Hotel> get(@PathVariable("id-hotel") Long idHotel) {
         return ResponseEntity.ok(new Hotel());
     }
 
@@ -29,7 +27,7 @@ public class HotelController {
     }
 
     @PostMapping("{id-hotel}/rooms/{id-room}")
-    public ResponseEntity<Void> addRoom() {
+    public ResponseEntity<Void> addRoom(@PathVariable("id-hotel") Long idHotel, @PathVariable("id-room") Long idRoom) {
         return ResponseEntity.noContent().build();
     }
 }

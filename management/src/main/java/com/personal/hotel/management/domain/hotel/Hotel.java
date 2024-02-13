@@ -7,7 +7,8 @@ import java.util.List;
 
 @Data
 public class Hotel {
+    private Long id;
     private String name;
-    private String address;
+    private Address address;
     private List<Room> rooms;
 }
