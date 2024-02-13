@@ -12,4 +12,9 @@ public class HotelDomainService {
     public Hotel create(Hotel hotel) {
         return hotelRepository.save(hotel);
     }
+
+    public void associateRoom() {
+
+    }
+
 }
